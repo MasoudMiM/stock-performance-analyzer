@@ -70,6 +70,8 @@ pip install yfinance numpy pandas matplotlib google-auth google-auth-oauthlib go
    if __name__ == '__main__':
        main(days=DAYS, top_n=N_STOCK, recipient_email=MY_EMAIL)
    ```
+   
+## Example Output Email
 
 ## Usage
 

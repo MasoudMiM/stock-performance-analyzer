@@ -188,7 +188,6 @@ def send_email(service, top_performers, worst_performers, top_plot, bottom_plot,
         html_content += top_performers.to_html(index=False)
         html_content += "<h2>Worst Performing Stocks</h2>"
         html_content += worst_performers.to_html(index=False)
-        html_content += "<h2>Currently Owned Stocks</h2>"
         html_content += "<br><p>Please see the attached plots for visual representation.</p>"
         message.attach(MIMEText(html_content, 'html'))
         logger.info("Added HTML content with top and worst performers")
@@ -251,7 +250,7 @@ def main(days=15, top_n=10, recipient_email=None):
     top_performers.to_csv(f'{output_dir}/top_{top_n}_{data_range.strip()}_stocks_{timestamp}.csv', index=False)
     worst_performers.to_csv(f'{output_dir}/worst_{top_n}_{data_range.strip()}_stocks_{timestamp}.csv', index=False)
     
-    logger.info("Top and worst performing stocks as well as currently owned ones saved to CSV files")
+    logger.info("Top and worst performing stocks saved to CSV files")
 
     top_plot = plot_performers(output_dir, top_performers, f"top_{top_n}_performers", days, logger)
     bottom_plot = plot_performers(output_dir, worst_performers, f"worst_{top_n}_performers", days, logger)
