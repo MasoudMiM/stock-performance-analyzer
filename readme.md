@@ -71,7 +71,9 @@ pip install yfinance numpy pandas matplotlib google-auth google-auth-oauthlib go
        main(days=DAYS, top_n=N_STOCK, recipient_email=MY_EMAIL)
    ```
    
-## Example Output Email
+## Example Output 
+
+You can find a sample output [here](./outputs/results_20250306_020506/) for the given sample stock names in the text files under [data folder](./data/).
 
 ## Usage
 
